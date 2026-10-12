@@ -8,20 +8,20 @@
 :root{--bg:#f4f7fb;--card:#fff;--text:#1b2433;--muted:#5b667a;--a:#2563eb;--b:#7c3aed;--line:#e1e7f0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1420;--card:#171f2e;--text:#e8edf6;--muted:#9aa6bb;--a:#60a5fa;--b:#a78bfa;--line:#26314a}}
 :root[data-theme="dark"]{--bg:#0e1420;--card:#171f2e;--text:#e8edf6;--muted:#9aa6bb;--a:#60a5fa;--b:#a78bfa;--line:#26314a}
-html{scroll-padding-top:64px;scroll-behavior:smooth}*{box-sizing:border-box}
+html{scroll-padding-top:90px;scroll-behavior:smooth}*{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:4px;padding:8px 12px;overflow-x:auto}
-nav b{margin-right:auto;white-space:nowrap;color:var(--a)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px;padding:8px 12px}
+nav b{white-space:nowrap;color:var(--a);margin-right:8px}
 nav a{white-space:nowrap;text-decoration:none;color:var(--text);padding:6px 11px;border-radius:18px;font-size:.88rem}
 nav a:hover{background:var(--a);color:#fff}
 #theme{border:1px solid var(--line);background:none;color:var(--text);border-radius:18px;padding:5px 10px;cursor:pointer}
+@media(max-width:700px){nav{position:static}}
 .hero{background:linear-gradient(135deg,#1d4ed8,#7c3aed 60%,#db2777);color:#fff;padding:48px 18px 56px;overflow:hidden}
 .hero-in{max-width:960px;margin:auto;display:flex;flex-wrap:wrap;align-items:center;gap:24px;justify-content:center}
 .hero-t{flex:1 1 320px}.hero h1{font-size:2.3rem;line-height:1.15;margin:0 0 10px}
 .hero p{opacity:.93;margin:6px 0}.tag{display:inline-block;background:#ffffff30;border-radius:20px;padding:4px 14px;font-size:.85rem}
-.cta{border:0;cursor:pointer;background:#fff;color:#4c1d95;font-weight:800;font-size:1.05rem;padding:14px 30px;border-radius:30px;margin-top:14px;box-shadow:0 8px 24px #0004;animation:pulse 2s infinite;transition:transform .15s}
+.cta{border:0;cursor:pointer;background:#fff;color:#4c1d95;font-weight:800;font-size:1.05rem;padding:14px 30px;border-radius:30px;margin-top:14px;box-shadow:0 8px 24px #0004;transition:transform .15s}
 .cta:hover{transform:scale(1.06)}.cta:active{transform:scale(.97)}
-@keyframes pulse{0%{box-shadow:0 0 0 0 #ffffffaa}70%{box-shadow:0 0 0 16px #fff0}100%{box-shadow:0 0 0 0 #fff0}}
 .hero-img{flex:0 1 300px;display:flex;justify-content:center;gap:0;position:relative;height:290px;width:300px}
 .hero-img svg{position:absolute;filter:drop-shadow(0 12px 18px #0006)}
 .f1{left:20px;top:20px;transform:rotate(-10deg);animation:fl 4s ease-in-out infinite}
@@ -41,6 +41,7 @@ h2{margin:0 0 10px;color:var(--a)}
 .price{font-weight:700;color:var(--a)}
 .btn{border:0;cursor:pointer;background:linear-gradient(135deg,var(--a),var(--b));color:#fff;border-radius:20px;padding:8px 18px;font-weight:600;margin-top:8px}
 .box{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px}.box h3{margin:0;font-size:1rem}.box p{margin:2px 0 0;color:var(--muted)}
+.box a{color:var(--a)}
 .tags span{display:inline-block;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:4px 12px;margin:3px;font-size:.88rem}
 .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
 .tab{border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:20px;padding:7px 16px;cursor:pointer}
@@ -66,7 +67,7 @@ footer{text-align:center;color:var(--muted);padding:20px;font-size:.9rem}
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute"><defs>
-<symbol id="ph" viewBox="0 0 100 200"><rect x="4" y="4" width="92" height="192" rx="16" fill="#0f172a"/><rect x="10" y="12" width="80" height="176" rx="10" fill="currentColor"/><circle cx="50" cy="20" r="4" fill="#0f172a"/><circle cx="50" cy="105" r="22" fill="#ffffff55"/><rect x="24" y="150" width="52" height="8" rx="4" fill="#ffffff88"/><rect x="32" y="166" width="36" height="6" rx="3" fill="#ffffff55"/></symbol></defs></svg>
+<symbol id="phn" viewBox="0 0 100 200"><rect x="4" y="4" width="92" height="192" rx="16" fill="#0f172a"/><rect x="10" y="12" width="80" height="176" rx="10" fill="currentColor"/><circle cx="50" cy="20" r="4" fill="#0f172a"/><circle cx="50" cy="105" r="22" fill="#ffffff55"/><rect x="24" y="150" width="52" height="8" rx="4" fill="#ffffff88"/><rect x="32" y="166" width="36" height="6" rx="3" fill="#ffffff55"/></symbol></defs></svg>
 
 <nav><b>📱 Smart Mobile Hub</b><a href="#new">New Launches</a><a href="#business">Business</a><a href="#audience">Audience</a><a href="#seo">SEO</a><a href="#social">Social</a><a href="#ads">Advert</a><a href="#email">Email</a><a href="#tips">Suggestions</a><button id="theme" aria-label="Toggle theme">🌓</button></nav>
 
@@ -79,9 +80,9 @@ footer{text-align:center;color:var(--muted);padding:20px;font-size:.9rem}
 <p style="font-size:.85rem"><b>Created by Tejaswini Ekanath Bhusari</b> · USN-IT26D014</p>
 </div>
 <div class="hero-img">
-<svg class="f1" width="95" height="190" style="color:#0ea5e9"><use href="#ph"/></svg>
-<svg class="f2" width="105" height="210" style="color:#f472b6"><use href="#ph"/></svg>
-<svg class="f3" width="95" height="190" style="color:#22c55e"><use href="#ph"/></svg>
+<svg class="f1" width="95" height="190" style="color:#0ea5e9"><use href="#phn"/></svg>
+<svg class="f2" width="105" height="210" style="color:#f472b6"><use href="#phn"/></svg>
+<svg class="f3" width="95" height="190" style="color:#22c55e"><use href="#phn"/></svg>
 </div></div></header>
 
 <main>
@@ -95,26 +96,24 @@ footer{text-align:center;color:var(--muted);padding:20px;font-size:.9rem}
 <section id="new"><h2>🔥 New Launches in Store</h2>
 <p style="color:var(--muted)">Click “Enquire Now” on any phone to book a free demo.</p>
 <div class="grid">
-<div class="pc"><svg viewBox="0 0 100 200" style="color:#2563eb"><use href="#ph"/></svg><h3>Nova X5 5G</h3><p>108MP camera · 5000mAh</p><div class="price">₹18,999</div><button class="btn" data-phone="Nova X5 5G">Enquire Now</button></div>
-<div class="pc"><svg viewBox="0 0 100 200" style="color:#db2777"><use href="#ph"/></svg><h3>Pixel Lite Pro</h3><p>120Hz AMOLED · 67W charge</p><div class="price">₹24,499</div><button class="btn" data-phone="Pixel Lite Pro">Enquire Now</button></div>
-<div class="pc"><svg viewBox="0 0 100 200" style="color:#16a34a"><use href="#ph"/></svg><h3>Gamer Z Ultra</h3><p>Snapdragon · 144Hz display</p><div class="price">₹32,999</div><button class="btn" data-phone="Gamer Z Ultra">Enquire Now</button></div>
-<div class="pc"><svg viewBox="0 0 100 200" style="color:#f59e0b"><use href="#ph"/></svg><h3>Easy Smart 4G</h3><p>Big display · loud speaker</p><div class="price">₹8,499</div><button class="btn" data-phone="Easy Smart 4G">Enquire Now</button></div>
+<div class="pc"><svg viewBox="0 0 100 200" style="color:#2563eb"><use href="#phn"/></svg><h3>Nova X5 5G</h3><p>108MP camera · 5000mAh</p><div class="price">₹18,999</div><button class="btn" data-phone="Nova X5 5G">Enquire Now</button></div>
+<div class="pc"><svg viewBox="0 0 100 200" style="color:#db2777"><use href="#phn"/></svg><h3>Pixel Lite Pro</h3><p>120Hz AMOLED · 67W charge</p><div class="price">₹24,499</div><button class="btn" data-phone="Pixel Lite Pro">Enquire Now</button></div>
+<div class="pc"><svg viewBox="0 0 100 200" style="color:#16a34a"><use href="#phn"/></svg><h3>Gamer Z Ultra</h3><p>Snapdragon · 144Hz display</p><div class="price">₹32,999</div><button class="btn" data-phone="Gamer Z Ultra">Enquire Now</button></div>
+<div class="pc"><svg viewBox="0 0 100 200" style="color:#f59e0b"><use href="#phn"/></svg><h3>Easy Smart 4G</h3><p>Big display · loud speaker</p><div class="price">₹8,499</div><button class="btn" data-phone="Easy Smart 4G">Enquire Now</button></div>
 </div><p style="font-size:.8rem;color:var(--muted)">Model names and prices are sample data for the project.</p></section>
 
 <section id="business"><h2>1. Business Profile</h2>
 <p><b>Objective:</b> use digital marketing to promote newly launched mobile phones and accessories, increase online enquiries and bring more customers to the shop.</p>
 <div class="grid">
-<div class="box"><h3>Business Name</h3><p>Smart Mobile Hub</p></div><div class="box"><h3>Business Type</h3><p>Retail mobile phone and accessories store</p></div>
-<div class="box"><h3>Contact / WhatsApp</h3><p>4327890564</p></div><div class="box"><h3>Email</h3><p>smartmobilehub@gmail.com</p></div>
-<div class="box"><h3>Services</h3><p>New phones, EMI, exchange, accessories, repair, free demo</p></div><div class="box"><h3>Location</h3><p><div class="box">
-    <h3>Location</h3>
-    <p>Gandhi Colony, Fetri, District Nagpur – 441501</p>
-    <p>
-        📍 <a href="https://www.google.com/maps/search/?api=1&query=Gandhi+Colony+Fetri+Nagpur+441501" target="_blank">
-            View Location on Google Maps
-        </a>
-    </p>
-</div></div></section>
+<div class="box"><h3>Business Name</h3><p>Smart Mobile Hub</p></div>
+<div class="box"><h3>Business Type</h3><p>Retail mobile phone and accessories store</p></div>
+<div class="box"><h3>Contact / WhatsApp</h3><p>4327890564</p></div>
+<div class="box"><h3>Email</h3><p>smartmobilehub@gmail.com</p></div>
+<div class="box"><h3>Services</h3><p>New phones, EMI, exchange, accessories, repair, free demo</p></div>
+<div class="box"><h3>Location</h3>
+<p>Gandhi Colony, Fetri, District Nagpur – 441501</p>
+<p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Gandhi+Colony+Fetri+Nagpur+441501" target="_blank" rel="noopener">View Location on Google Maps</a></p></div>
+</div></section>
 
 <section id="audience"><h2>2. Target Audience</h2>
 <div class="scroll"><table><tr><th>Audience</th><th>Age</th><th>Requirement</th></tr>
@@ -131,7 +130,13 @@ footer{text-align:center;color:var(--muted);padding:20px;font-size:.9rem}
 <section id="social"><h2>4. Social Media Marketing</h2>
 <div class="tabs" id="tabs"><button class="tab on" data-t="p1">Instagram</button><button class="tab" data-t="p2">Facebook</button><button class="tab" data-t="p3">WhatsApp</button><button class="tab" data-t="p4">YouTube</button></div>
 <div class="panel on" id="p1"><b>smart_mobile_hub</b><br>📱 New Launch Alert! Latest 5G smartphone now at our store.<br>🎁 Free tempered glass + cover · 💳 Easy EMI · 🔄 Exchange Offer<br><span style="color:var(--a)">#NewMobile #SmartphoneLaunch #MobileStore #Nagpur</span><br><small>Content: unboxing Reels, camera tests, delivery photos.</small></div>
-<div class="panel" id="p2"><b>Smart Mobile Hub</b> · Sponsored<br>🎉 Festive Mobile Mela! Up to 10% cashback on selected phone
+<div class="panel" id="p2"><b>Smart Mobile Hub</b> · Sponsored<br>🎉 Festive Mobile Mela! Up to 10% cashback on selected phones. Exchange your old phone and upgrade today.<br><small>Content: offers, festival sales, store events.</small></div>
+<div class="panel" id="p3">👋 Hello! Looking for a new phone?<br>📱 Latest models · 💳 No-cost EMI · 🎁 Free accessories<br>Reply <b>“PHONE”</b> to get today's best deals.<br><small>Content: new arrivals, price lists, offer reminders.</small></div>
+<div class="panel" id="p4"><b>Phone reviews, comparisons and unboxing</b> to build trust and help customers compare phones before visiting the shop.</div></section>
+
+<section id="ads"><h2>5. Advertisement</h2>
+<div class="ad"><div>SMART MOBILE HUB</div><h3>Upgrade to the Latest 5G Smartphone! 📱</h3><div>Best Price • Easy EMI • Exchange Offer • Free Accessories</div><p>Free tempered glass and cover on every new phone.</p><button class="cta" data-open>Visit the Store Today</button></div></section>
+
 <section id="email"><h2>6. Email Marketing</h2>
 <b>Subject: New Phone Launch – Exclusive Offers Inside! 🎉</b>
 <p>Hello, thinking of upgrading your phone? Our store now has the newest smartphones with powerful cameras, fast processors and long-lasting batteries.<br>📱 Latest Models | 💳 Easy EMI | 🔄 Exchange Offer<br>🎉 <b>Special Offer:</b> buy any new phone this month and get a free screen guard and back cover. Visit us for a free demo.<br>Regards, <b>Smart Mobile Hub</b></p></section>
@@ -139,7 +144,7 @@ footer{text-align:center;color:var(--muted);padding:20px;font-size:.9rem}
 <section id="tips"><h2>7. Business Improvement Suggestions</h2><ol>
 <li><b>Google Business Profile:</b> keep photos, timings and new arrivals updated.</li><li><b>Reviews:</b> ask happy customers for genuine Google reviews.</li><li><b>Short videos:</b> share unboxing and camera test Reels.</li><li><b>Referral benefits:</b> small accessory discount for referrals.</li><li><b>Easy enquiry:</b> WhatsApp catalogue and enquiry form.</li><li><b>Flexible payments:</b> promote EMI, exchange and cashback.</li><li><b>Launch events:</b> in-store demo days.</li><li><b>Measure results:</b> track reach, enquiries, visits and sales.</li></ol></section>
 </main>
-<footer><b>TAE-I Project Based Learning</b><br>Digital Marketing – Promoting New Mobile Products through a Retail Mobile Store<br><b>Created by Tejaswini Ekanath Bhusari </b> · USN-IT26D014</footer>
+<footer><b>TAE-I Project Based Learning</b><br>Digital Marketing – Promoting New Mobile Products through a Retail Mobile Store<br><b>Created by Tejaswini Ekanath Bhusari</b> · USN-IT26D014</footer>
 
 <div id="ov" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="modal">
 <button class="x" id="close" aria-label="Close">×</button>
@@ -156,8 +161,8 @@ footer{text-align:center;color:var(--muted);padding:20px;font-size:.9rem}
 <div id="toast"></div>
 
 <script>
-// ===== Edit these store details =====
-var STORE={name:"Smart Mobile Hub",wa:"919999999999",addr:",p>Gandhi Colony, Fetri, District Nagpur – 441501"};
+// ===== Store details =====
+var STORE={name:"Smart Mobile Hub",wa:"914327890564",addr:"Gandhi Colony, Fetri, District Nagpur – 441501"};
 var $=function(i){return document.getElementById(i)};
 var ov=$("ov"),lastFocus=null,info="";
 function toast(m){var t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(t.h);t.h=setTimeout(function(){t.classList.remove("show")},2600)}
